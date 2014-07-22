@@ -1,4 +1,5 @@
 Rails.application.configure do
+  ruby '2.0.0'
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -79,4 +80,9 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
+
 end
